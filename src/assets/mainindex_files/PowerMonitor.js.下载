@@ -1,0 +1,62 @@
+﻿
+    //$(function () {
+       
+    //    var path = window.location.pathname;
+    //    if (path.split("/").length < 3) {
+    //        return;
+    //    }
+    //    $.ajax({
+    //        type: "POST",
+    //        // url: "../../Authorize/PowerHandler.ashx",
+    //        url: "Common/Authorize",
+    //        data: { control: path.split('/')[1], action: path.split('/')[2] },
+    //        dataType: "text",
+    //        success: function (data) {
+    //            if (!isNaN(data)) {
+    //                alert(data.toString());
+    //                //权限钮的显示隐藏，just显示隐藏
+    //            }
+    //        }
+    //    });
+      
+    //});
+
+function logger() {
+    //console.log("复制");
+       
+    $.ajax({
+        type: "post",
+        url: "../home/logger",
+        data: { actionUrl: window.location.pathname },
+        datatype: "text",
+        success: function (result) {
+            //alert(result);
+
+            if (result != "") {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    })
+}
+$(document).keydown(function (e) {
+    // 禁用ctrl + s，浏览器的另存为禁用失败~
+    if (e.ctrlKey == true && e.keyCode == 83) {
+        // console.log('ctrl+s');
+        return false; // 截取返回false就不会保存网页了
+    }
+});
+
+
+    document.body.oncopy = function () { logger(); }
+    //document.body.onselectstart  页面选中功能。
+
+    //document.body.oncontextmenu页面右键菜单。
+
+    //document.body.ondragstart页面内容拖拽功能，拖拽是可以实现复制的。禁止复制时需要将其禁用。
+
+    //document.body.oncopy页面内容复制功能，当禁用时，即使你点击了复制或使用了快捷键但是你剪切板中的内容不是你刚复制的内容而是你以前放在剪切板中的内容或为空。
+
+    //document.body.oncut页面内容剪切功能，禁用和效果和禁用复制功能类似。

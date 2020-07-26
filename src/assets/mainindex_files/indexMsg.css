@@ -1,0 +1,38 @@
+﻿        .titlebt {
+	    font-size: 15px;
+	    line-height: 26px;
+	    font-weight: bold;
+	    color: #000000;
+	    background-color:#bcd;
+	    display: block;
+	    text-indent: 15px;
+	    padding-top: 5px;
+	    }       
+        .pTitle
+        {
+            width: 40%;
+            float: left;
+        }
+        .aTitle
+        {
+            color: #444;
+            font-size: 13px;
+            text-decoration: none;
+            color: #232;
+            float: left;
+            text-indent: 5px;
+        }
+        .aTitle:hover
+        {
+            color: #224;
+            text-decoration: underline;
+        }
+        .msgTitle
+        {
+            margin: 3px 0 3px 0;
+            font-size: 14px;
+            width: 75%;
+            text-align: left;
+            float: left;
+        }
+      

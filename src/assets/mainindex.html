@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://manage2018.zhongmin.cn/Home/MainIndex -->
+<html class="panel-fit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <title>mainindex</title>
+
+    <script src="./mainindex_files/hm.js.下载"></script><script type="text/javascript" src="./mainindex_files/ZMCommon.js.下载"></script><link rel="shortcut icon" href="https://manage2018.zhongmin.cn/Home/favicon.ico"><link href="./mainindex_files/easyui.css" rel="stylesheet" type="text/css"><link href="./mainindex_files/easyui_animation.css" rel="stylesheet" type="text/css"><link href="./mainindex_files/easyui_plus.css" rel="stylesheet" type="text/css"><link href="./mainindex_files/insdep_theme_default.css" rel="stylesheet" type="text/css"><link href="./mainindex_files/icon.css" rel="stylesheet" type="text/css"><link href="./mainindex_files/font-awesome.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./mainindex_files/jquery.min.js.下载"></script><script type="text/javascript" src="./mainindex_files/jquery.easyui.min.js.下载"></script><script type="text/javascript" src="./mainindex_files/jquery.insdep-extend.min.js.下载"></script><script src="./mainindex_files/easyui-lang-zh_CN.js.下载"></script>
+    <!-- 自定义中民主题 -->
+    <link href="./mainindex_files/easyui(1).css" rel="stylesheet" type="text/css">
+    <link href="./mainindex_files/insdep_theme_zm.css" rel="stylesheet" type="text/css">
+    <script>
+        window.onload=function (){            
+            Getmessager();        
+        }
+        function Getmessager() {        
+        $.ajax({
+            type: "post",
+            url: "/Home/Getmessager",
+            datatype: "text",
+            success: function (data) {
+                var MessageInfo = data.MessageInfo;           
+                if (MessageInfo != "")
+                {
+                    messagerShow(MessageInfo);
+                }               
+            }
+        })
+        setTimeout(Getmessager, 1000 * 60 * 5);
+    }
+    function messagerShow(MessageInfo) {
+        $.messager.show({
+            title: '消息提醒！',
+            width: '330px',
+            height: '200px',
+            msg: MessageInfo,
+            timeout: 10000,
+            showType: 'slide'
+        });
+    }
+    </script>
+
+</head>
+
+<body class="panel-noscroll" style="" rlt="1">
+    <div id="master-layout" class="layout easyui-fluid" style="width: 1280px; height: 561px;">
+        <div class="panel layout-panel layout-panel-north" style="width: 1280px; left: 0px; top: 0px;"><div data-options="region:&#39;north&#39;,border:false,bodyCls:&#39;theme-header-layout&#39;" title="" class="panel-body panel-body-noheader panel-body-noborder theme-header-layout layout-body" style="width: 1280px; height: 56px;">
+            <div class="theme-navigate">
+                <div class="left">
+                    
+
+                    <a href="https://manage2018.zhongmin.cn/Home/MainIndex#" class="easyui-menubutton theme-navigate-user-button l-btn l-btn-small l-btn-plain m-btn m-btn-small" data-options="menu:&#39;.theme-navigate-user-panel&#39;" group="" id=""><span class="l-btn-left"><span class="l-btn-text">linzy</span><span class="m-btn-downarrow"></span><span class="m-btn-line"></span></span></a>
+                    
+                </div>
+                <div class="right">
+                    
+                    
+                    <a href="https://manage2018.zhongmin.cn/Bugs/BugList" target="_blank" style="color:white">bug提交</a>
+                </div>
+            </div>
+
+        </div></div>
+
+        <!--开始左侧菜单-->
+        <div class="panel layout-panel layout-panel-west" style="width: 200px; left: 0px; top: 68px;"><div data-options="region:&#39;west&#39;,border:true,bodyCls:&#39;theme-left-layout&#39;" style="width: 198px; height: 493px;" title="" class="panel-body panel-body-noheader theme-left-layout layout-body">
+
+
+            <!--正常菜单-->
+            <div class="theme-left-normal panel-noscroll" data-options="border:false">
+                <!--theme-left-switch 如果不需要缩进按钮，删除该对象即可-->
+                
+
+                <!--start class="easyui-layout"-->
+                <div class="easyui-layout layout easyui-fluid" data-options="border:false,fit:true" style="width: 198px; height: 493px;">
+                    <div class="panel layout-panel layout-panel-north" style="width: 198px; left: 0px; top: 0px;"><div data-options="region:&#39;north&#39;,border:false" id="timeNow" title="" class="panel-body panel-body-noheader panel-body-noborder layout-body" style="width: 185px; height: 35px;">2020年07月26日 10:52:05</div></div>
+
+                    
+
+
+                    <!--start region:'center'-->
+                    <div class="panel layout-panel layout-panel-center" style="width: 198px; left: 0px; top: 35px;"><div data-options="region:&#39;center&#39;,border:false" style="overflow-y: auto; width: 198px; height: 458px;" title="" class="panel-body panel-body-noheader panel-body-noborder layout-body panel-noscroll">
+
+                        <!--start easyui-accordion-->
+                        <div class="easyui-accordion accordion accordion-noborder easyui-fluid" data-options="border:false,fit:true" style="width: 198px; height: auto;">
+
+                            <div class="panel" style="width: 198px;"><div class="panel-header accordion-header accordion-header-selected" style="width: 173px; height: 16px;"><div class="panel-title">我的快捷菜单</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse" style="display: none;"></a><a href="javascript:;" class="accordion-collapse"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: block; width: 198px; height: 210px;">
+                                <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 210px;"><div class="datagrid-view" style="width: 198px; height: 210px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 51px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c13-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 210px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0" style=""><tbody><tr id="datagrid-row-r13-2-0" datagrid-row-index="0" class="datagrid-row"><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c13-text">订单小工具</div></td></tr><tr id="datagrid-row-r13-2-1" datagrid-row-index="1" class="datagrid-row"><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c13-text">修改用户订单删除</div></td></tr><tr id="datagrid-row-r13-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c13-text">会员充值记录</div></td></tr><tr id="datagrid-row-r13-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c13-text">订单职业配置表</div></td></tr><tr id="datagrid-row-r13-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c13-text">会员变更记录</div></td></tr><tr id="datagrid-row-r13-2-5" datagrid-row-index="5" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c13-text">超出险种购买份数/超额 --订单白名单</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+                                        <li value="/Power/MenuList">订单小工具</li>
+                                        <li value="/OrderTool/updateUserdel">修改用户订单删除</li>
+                                        <li value="/Union/VIPRechargeRecord">会员充值记录</li>
+                                        <li value="/ProBuyPage/OrderJobCode">订单职业配置表</li>
+                                        <li value="/Union/UserLevelRecord">会员变更记录</li>
+                                        <li value="/OrderTool/WhiteList">超出险种购买份数/超额 --订单白名单</li>
+                                </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+</style></div></div></div>
+                            </div></div>
+
+
+
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">用户管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 280px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 280px;"><div class="datagrid-view" style="width: 198px; height: 280px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c14-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 280px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r14-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">中民用户管理</div></td></tr><tr id="datagrid-row-r14-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">用户注册类型表</div></td></tr><tr id="datagrid-row-r14-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">用户红酒券</div></td></tr><tr id="datagrid-row-r14-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">第三方登陆方式类型表</div></td></tr><tr id="datagrid-row-r14-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">第三方登陆方式详情表</div></td></tr><tr id="datagrid-row-r14-2-5" datagrid-row-index="5" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">邮箱黑名单</div></td></tr><tr id="datagrid-row-r14-2-6" datagrid-row-index="6" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">手机黑名单列表</div></td></tr><tr id="datagrid-row-r14-2-7" datagrid-row-index="7" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c14-text">电话号码组管理</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../Account/User">中民用户管理</li>
+                                                <li value="../Member/RegType">用户注册类型表</li>
+                                                <li value="../UesrRedWine/WineCoupon">用户红酒券</li>
+                                                <li value="../Member/LoginHelperType">第三方登陆方式类型表</li>
+                                                <li value="../Member/LoginHelperDetail">第三方登陆方式详情表</li>
+                                                <li value="../Blacklist/EmailBlackList">邮箱黑名单</li>
+                                                <li value="../Blacklist/MobileBlackList">手机黑名单列表</li>
+                                                <li value="../Member/PhoneManger">电话号码组管理</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c14-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">客服中心</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 595px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 595px;"><div class="datagrid-view" style="width: 198px; height: 595px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c15-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 595px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r15-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">客服管理&gt;&gt;&gt;</div></td></tr><tr id="datagrid-row-r15-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">日常事务&gt;&gt;&gt;</div></td></tr><tr id="datagrid-row-r15-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">我的名单</div></td></tr><tr id="datagrid-row-r15-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">用户评论</div></td></tr><tr id="datagrid-row-r15-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">支付宝咨询</div></td></tr><tr id="datagrid-row-r15-2-5" datagrid-row-index="5" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">微信咨询</div></td></tr><tr id="datagrid-row-r15-2-6" datagrid-row-index="6" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">个人提成列表</div></td></tr><tr id="datagrid-row-r15-2-7" datagrid-row-index="7" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">我的归属客户</div></td></tr><tr id="datagrid-row-r15-2-8" datagrid-row-index="8" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">我的签到记录</div></td></tr><tr id="datagrid-row-r15-2-9" datagrid-row-index="9" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">我的通话记录</div></td></tr><tr id="datagrid-row-r15-2-10" datagrid-row-index="10" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">积分宝登录报表</div></td></tr><tr id="datagrid-row-r15-2-11" datagrid-row-index="11" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">信用卡业绩报表</div></td></tr><tr id="datagrid-row-r15-2-12" datagrid-row-index="12" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">健康保险推荐统计</div></td></tr><tr id="datagrid-row-r15-2-13" datagrid-row-index="13" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">我的微信记录</div></td></tr><tr id="datagrid-row-r15-2-14" datagrid-row-index="14" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">知识库</div></td></tr><tr id="datagrid-row-r15-2-15" datagrid-row-index="15" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">产品续保规则表</div></td></tr><tr id="datagrid-row-r15-2-16" datagrid-row-index="16" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c15-text">签到</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../power/Menulist?id=337">客服管理&gt;&gt;&gt;</li>
+                                                <li value="../power/Menulist?id=643">日常事务&gt;&gt;&gt;</li>
+                                                <li value="../Distribution/DistributeDetail?type=1">我的名单</li>
+                                                <li value="../CustomManager/Comments">用户评论</li>
+                                                <li value="../ChatList/AlChatList">支付宝咨询</li>
+                                                <li value="../ChatList/WxChatList">微信咨询</li>
+                                                <li value="../Deduct/MyDeductPre">个人提成列表</li>
+                                                <li value="../CustomerTelDistribute/CustomTelDistribute">我的归属客户</li>
+                                                <li value="../CustomManager/AdminSginList">我的签到记录</li>
+                                                <li value="../OrderInfo/MyCallRecord">我的通话记录</li>
+                                                <li value="../CustomerDistribute/IntegralReport?type=0">积分宝登录报表</li>
+                                                <li value="../Distribution/ZxResults?type=0">信用卡业绩报表</li>
+                                                <li value="../SalesWork/HeathPlanStatistics?type=0">健康保险推荐统计</li>
+                                                <li value="../WxRecordManage/CustomWxRecord?webSite=0">我的微信记录</li>
+                                                <li value="../KnowledgeBase/KnowledgeBaseIndex">知识库</li>
+                                                <li value="../ProductSetting/RenewwalRuleList">产品续保规则表</li>
+                                                <li value="../CustomManager/SetCustomSign">签到</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c15-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">产品管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 35px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 35px;"><div class="datagrid-view" style="width: 198px; height: 35px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c16-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 35px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r16-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c16-text">黑名单管理&gt;&gt;&gt;</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../power/Menulist?id=627">黑名单管理&gt;&gt;&gt;</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c16-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">车险管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 35px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 35px;"><div class="datagrid-view" style="width: 198px; height: 35px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c17-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 35px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r17-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c17-text">车险订单查看</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../CarOrder/CarOrderList">车险订单查看</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c17-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">公司管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 35px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 35px;"><div class="datagrid-view" style="width: 198px; height: 35px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c18-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 35px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r18-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c18-text">公司管理</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../CompanyNew/CompanyManager">公司管理</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c18-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">订单管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 700px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 700px;"><div class="datagrid-view" style="width: 198px; height: 700px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c19-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 700px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r19-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">合作机构订单</div></td></tr><tr id="datagrid-row-r19-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">中信联名信用卡&gt;&gt;&gt;</div></td></tr><tr id="datagrid-row-r19-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">人工核保订单</div></td></tr><tr id="datagrid-row-r19-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">撤单列表</div></td></tr><tr id="datagrid-row-r19-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">健康告知审核</div></td></tr><tr id="datagrid-row-r19-2-5" datagrid-row-index="5" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">支付日志</div></td></tr><tr id="datagrid-row-r19-2-6" datagrid-row-index="6" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">备注订单</div></td></tr><tr id="datagrid-row-r19-2-7" datagrid-row-index="7" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">订单批量备注</div></td></tr><tr id="datagrid-row-r19-2-8" datagrid-row-index="8" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">订单查找</div></td></tr><tr id="datagrid-row-r19-2-9" datagrid-row-index="9" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">已关闭订单</div></td></tr><tr id="datagrid-row-r19-2-10" datagrid-row-index="10" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">已出单列表</div></td></tr><tr id="datagrid-row-r19-2-11" datagrid-row-index="11" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">通话记录列表</div></td></tr><tr id="datagrid-row-r19-2-12" datagrid-row-index="12" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">蚂蚁淘宝订单</div></td></tr><tr id="datagrid-row-r19-2-13" datagrid-row-index="13" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">订单异常管理</div></td></tr><tr id="datagrid-row-r19-2-14" datagrid-row-index="14" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">退款订单</div></td></tr><tr id="datagrid-row-r19-2-15" datagrid-row-index="15" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">订单异常列表（运维）</div></td></tr><tr id="datagrid-row-r19-2-16" datagrid-row-index="16" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">中信订单列表</div></td></tr><tr id="datagrid-row-r19-2-17" datagrid-row-index="17" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">订单跟进提醒</div></td></tr><tr id="datagrid-row-r19-2-18" datagrid-row-index="18" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">支付通知回调多次</div></td></tr><tr id="datagrid-row-r19-2-19" datagrid-row-index="19" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c19-text">农商行支付异常订单列表</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../OrderInfo/CooperationOrder">合作机构订单</li>
+                                                <li value="../power/Menulist?id=2942">中信联名信用卡&gt;&gt;&gt;</li>
+                                                <li value="../OrderManger/OrderUnderwriting">人工核保订单</li>
+                                                <li value="../OrderInfo/OrderCancelList">撤单列表</li>
+                                                <li value="../HealthError/Artificialhb">健康告知审核</li>
+                                                <li value="../PayLog/PayLog">支付日志</li>
+                                                <li value="../OrderManger/OrderMemo">备注订单</li>
+                                                <li value="../OrderManger/OrderInsertMemo">订单批量备注</li>
+                                                <li value="../OrderManger/OrderSearch">订单查找</li>
+                                                <li value="../OrderManger/OrderClose">已关闭订单</li>
+                                                <li value="../OrderManger/OrderOut">已出单列表</li>
+                                                <li value="../OrderInfo/CallRecord">通话记录列表</li>
+                                                <li value="../OrderInfo/CooperationCompanyOrder">蚂蚁淘宝订单</li>
+                                                <li value="../OrderManger/OrderError">订单异常管理</li>
+                                                <li value="../OrderInfo/RefundOrder">退款订单</li>
+                                                <li value="../OrderManger/OrderErrorAsyn">订单异常列表（运维）</li>
+                                                <li value="../OrderManger/ZXorder">中信订单列表</li>
+                                                <li value="../OrderInfo/OrderWarnList">订单跟进提醒</li>
+                                                <li value="../PayLog/Sofpayment">支付通知回调多次</li>
+                                                <li value="../RcbBankExceptOrder/Index">农商行支付异常订单列表</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c19-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">系统管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 175px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 175px;"><div class="datagrid-view" style="width: 198px; height: 175px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c20-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 175px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r20-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c20-text">bug提交</div></td></tr><tr id="datagrid-row-r20-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c20-text">短信邮件日志查询&gt;&gt;&gt;</div></td></tr><tr id="datagrid-row-r20-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c20-text">订单状态配置表</div></td></tr><tr id="datagrid-row-r20-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c20-text">模拟登陆用户会员中心</div></td></tr><tr id="datagrid-row-r20-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c20-text">设置我的菜单快捷方式</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../Bugs/BugList">bug提交</li>
+                                                <li value="../power/Menulist?id=2643">短信邮件日志查询&gt;&gt;&gt;</li>
+                                                <li value="../OrderManger/StateConfig">订单状态配置表</li>
+                                                <li value="../tempGoMemo/Index">模拟登陆用户会员中心</li>
+                                                <li value="../SmartMenu/LeftSmartMenu">设置我的菜单快捷方式</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c20-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">后台用户权限管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 70px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 70px;"><div class="datagrid-view" style="width: 198px; height: 70px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c21-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 70px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r21-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c21-text">后台用户管理</div></td></tr><tr id="datagrid-row-r21-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c21-text">后台消息发布</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../Power/AdminUserList">后台用户管理</li>
+                                                <li value="../VMessageInfo/list">后台消息发布</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c21-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">网站活动管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 280px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 280px;"><div class="datagrid-view" style="width: 198px; height: 280px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c22-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 280px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r22-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">红酒券领取记录</div></td></tr><tr id="datagrid-row-r22-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">优惠券查询</div></td></tr><tr id="datagrid-row-r22-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">航延券查询</div></td></tr><tr id="datagrid-row-r22-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">积分兑换保障</div></td></tr><tr id="datagrid-row-r22-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">红酒兑换码发送记录</div></td></tr><tr id="datagrid-row-r22-2-5" datagrid-row-index="5" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">红酒兑换码类型</div></td></tr><tr id="datagrid-row-r22-2-6" datagrid-row-index="6" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">红酒券类型</div></td></tr><tr id="datagrid-row-r22-2-7" datagrid-row-index="7" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c22-text">中民健康保险计划用户</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../Packet/UserPacket">红酒券领取记录</li>
+                                                <li value="../Coupon/CouponQuery">优惠券查询</li>
+                                                <li value="../Coupon/HyCoupon">航延券查询</li>
+                                                <li value="../Integration/HealthProPlan">积分兑换保障</li>
+                                                <li value="../Integration/SendWineedKeyHistory">红酒兑换码发送记录</li>
+                                                <li value="../Integration/WineActive">红酒兑换码类型</li>
+                                                <li value="../RedPack/RedPackType">红酒券类型</li>
+                                                <li value="../ZxBaoeList/List">中民健康保险计划用户</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c22-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+                                <div class="panel" style="width: 198px;"><div class="panel-header accordion-header" style="height: 16px; width: 173px;"><div class="panel-title">理赔管理</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-collapse panel-tool-expand" style="display: none;"></a><a href="javascript:;" class="accordion-collapse accordion-expand"></a></div></div><div title="" class="panel-noscroll panel-body accordion-body" style="display: none; width: 198px; height: 175px;">
+                                    <div class="panel datagrid datalist easyui-fluid" style="width: 198px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 198px; height: 175px;"><div class="datagrid-view" style="width: 198px; height: 175px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 100px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 198px;"><div class="datagrid-header" style="width: 198px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c23-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 198px; margin-top: 0px; height: 175px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r23-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c23-text">报案提醒</div></td></tr><tr id="datagrid-row-r23-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c23-text">添加报案</div></td></tr><tr id="datagrid-row-r23-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c23-text">报案列表</div></td></tr><tr id="datagrid-row-r23-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c23-text">理赔列表</div></td></tr><tr id="datagrid-row-r23-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c23-text">理赔人员分配</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 198px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+
+                                                <li value="../ClaimManager/ComplainPrompt">报案提醒</li>
+                                                <li value="../ClaimManager/QueryPolicy">添加报案</li>
+                                                <li value="../Complaint/ComplaintList">报案列表</li>
+                                                <li value="../Complaint/ClaimList">理赔列表</li>
+                                                <li value="../ClaimDataConfig/CompanyClaimer">理赔人员分配</li>
+                                    </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c23-text{width:171px}
+</style></div></div></div>
+                                </div></div>
+
+                        
+                        </div>
+
+                        <!--end easyui-accordion-->
+
+                    </div></div>
+                    <!--end region:'center'-->
+                <div class="layout-split-proxy-h"></div><div class="layout-split-proxy-v"></div></div>
+                <!--end class="easyui-layout"-->
+
+            </div>
+            <!--最小化菜单-->
+            <div class="theme-left-minimal panel-noscroll" style="">
+                <div class="panel datagrid datalist easyui-fluid" style="width: 200px;"><div class="datagrid-wrap panel-body panel-body-noheader panel-body-noborder" title="" style="width: 200px; height: 175px;"><div class="datagrid-view" style="width: 200px; height: 175px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 502px;"><div class="datagrid-body-inner"></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><div class="datagrid-view2" style="width: 200px;"><div class="datagrid-header" style="width: 200px; height: 0px;"><div class="datagrid-header-inner" style="display: none;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="text"><div class="datagrid-cell datagrid-cell-c24-text"><span></span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 200px; margin-top: 0px; height: 175px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r24-2-0" datagrid-row-index="0" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c24-text"><i class="fa fa-home fa-2x"></i><p>主题</p></div></td></tr><tr id="datagrid-row-r24-2-1" datagrid-row-index="1" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c24-text"><i class="fa fa-book fa-2x"></i><p>组件</p></div></td></tr><tr id="datagrid-row-r24-2-2" datagrid-row-index="2" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c24-text"><i class="fa fa-pencil fa-2x"></i><p>编辑</p></div></td></tr><tr id="datagrid-row-r24-2-3" datagrid-row-index="3" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c24-text"><i class="fa fa-cog fa-2x"></i><p>设置</p></div></td></tr><tr id="datagrid-row-r24-2-4" datagrid-row-index="4" class="datagrid-row  "><td field="text"><div style="height:auto;" class="datagrid-cell datagrid-cell-c24-text"><a class="left-control-switch"><i class="fa fa-chevron-right fa-2x"></i><p>打开</p></a></div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 200px;"><div class="datagrid-footer-inner" style="display: none;"></div></div></div><ul class="easyui-datalist datagrid-f" data-options="border:false,fit:true" style="display: none;">
+                    <li><i class="fa fa-home fa-2x"></i><p>主题</p></li>
+                    <li><i class="fa fa-book fa-2x"></i><p>组件</p></li>
+                    <li><i class="fa fa-pencil fa-2x"></i><p>编辑</p></li>
+                    <li><i class="fa fa-cog fa-2x"></i><p>设置</p></li>
+                    <li><a class="left-control-switch"><i class="fa fa-chevron-right fa-2x"></i><p>打开</p></a></li>
+                </ul><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c24-text{width:173px}
+</style></div></div></div>
+            </div>
+
+        </div></div>
+        <!--结束左侧菜单-->
+        <!--右侧目录内容-->
+        <div class="panel layout-panel layout-panel-center" style="width: 1081px; left: 199px; top: 68px;"><div id="rightContent" data-options="region:&#39;center&#39;," style="overflow: hidden; width: 1079px; height: 491px; left: 210px;" title="" class="panel-body panel-body-noheader layout-body">
+            <div id="tt" class="easyui-tabs tabs-container easyui-fluid" style="height: 491px;">
+                
+            <div class="tabs-header" style="width: 1077px;"><div class="tabs-scroller-left" style="display: none;"></div><div class="tabs-scroller-right" style="display: none;"></div><div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 1077px;"><ul class="tabs" style="height: 35px;"><li class="tabs-selected tabs-first tabs-last"><a href="javascript:;" class="tabs-inner" style="height: 34px; line-height: 34px;"><span class="tabs-title">主页</span><span class="tabs-icon"></span></a></li></ul></div></div><div class="tabs-panels" style="height: 449px; width: 1077px;"><div class="panel" style="display: block;"><div title="" data-options="region:&#39;center&#39;,border:false,href:&#39;/home/IndexMsg&#39;" style="background: rgb(255, 255, 255); width: 1077px; height: 449px;" class="panel-body panel-body-noheader panel-body-noborder">
+        <link href="./mainindex_files/indexMsg.css" rel="stylesheet">
+        <link href="./mainindex_files/adminM.css" rel="stylesheet">
+        <div align="right" style="margin-right: 25px">
+            <a href="javascript:void(0)" class="easyui-linkbutton l-btn l-btn-small" onclick="RefreshTab()" group="" id=""><span class="l-btn-left"><span class="l-btn-text">刷新</span></span></a>
+        </div>
+
+        <div class="box">
+            
+            
+            <table id="lvw_itemPlaceholderContainer" width="100%">
+                <tbody>
+
+
+                        <tr id="lvw_ctrl0_msgList">
+                            <td>
+                                <div class="section">
+                                    <div class="sect-tit">
+                                        <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/GetDeptInfoList?id=22&#39;, &#39;部门发布信息查看&#39;)">更多 &gt;</a>
+                                      
+                                        
+                                        
+                                       <strong>产品 信息</strong>
+                                    </div>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12369&#39;, &#39;信息查看&#39;)">【产品上架 2020年7月24日】招商信诺自在人生B款终身年金保险计划 </a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/24 14:42:13</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12349&#39;, &#39;信息查看&#39;)">【产品下架】国华至尊保重大疾病保障计划&amp;弘康大白定寿</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/23 16:36:43</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12329&#39;, &#39;信息查看&#39;)">【新产品上线通知】瑞泰瑞和2020定期寿险</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/22 10:49:04</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12310&#39;, &#39;信息查看&#39;)">【产品恢复上架通知】百年康惠保重大疾病保险恢复上线通知</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/20 15:23:28</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12290&#39;, &#39;信息查看&#39;)">【产品保额调整】妈咪保贝少儿重疾0-3周岁累计风险保额降低</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/17 20:25:01</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12289&#39;, &#39;信息查看&#39;)">【新产品上线通知】中韩悦未来养老年金</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/17 18:04:04</span>
+                                        </li>
+                                    </ul>
+                                  
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="lvw_ctrl0_msgList">
+                            <td>
+                                <div class="section">
+                                    <div class="sect-tit">
+                                        <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/GetDeptInfoList?id=24&#39;, &#39;部门发布信息查看&#39;)">更多 &gt;</a>
+                                      
+                                        
+                                        
+                                       <strong>客服 信息</strong>
+                                    </div>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=2444&#39;, &#39;信息查看&#39;)">美亚--潭美台风事件声明</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2018/9/27 21:08:36</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=2341&#39;, &#39;信息查看&#39;)">20180914培训日志</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2018/9/14 14:14:12</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=2301&#39;, &#39;信息查看&#39;)">20180912培训日志</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2018/9/12 21:05:18</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=2241&#39;, &#39;信息查看&#39;)">20180910培训日志</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2018/9/10 16:14:54</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=2221&#39;, &#39;信息查看&#39;)">20180907培训日志</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2018/9/7 8:51:35</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=2141&#39;, &#39;信息查看&#39;)">20180904培训日志</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2018/9/4 8:33:45</span>
+                                        </li>
+                                    </ul>
+                                  
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="lvw_ctrl0_msgList">
+                            <td>
+                                <div class="section">
+                                    <div class="sect-tit">
+                                        <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/GetDeptInfoList?id=23&#39;, &#39;部门发布信息查看&#39;)">更多 &gt;</a>
+                                      
+                                        
+                                        
+                                       <strong>技术 信息</strong>
+                                    </div>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12309&#39;, &#39;信息查看&#39;)">20200720更新</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/20 14:08:27</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12269&#39;, &#39;信息查看&#39;)">7月11/14日更新项目</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/16 17:42:06</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12009&#39;, &#39;信息查看&#39;)">20200630更新</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/1 8:49:41</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=11850&#39;, &#39;信息查看&#39;)">20200622/23更新</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/6/23 15:22:10</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=11730&#39;, &#39;信息查看&#39;)">20200612更新</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/6/12 16:46:40</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=11729&#39;, &#39;信息查看&#39;)">20200605更新</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/6/12 16:44:26</span>
+                                        </li>
+                                    </ul>
+                                  
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="lvw_ctrl0_msgList">
+                            <td>
+                                <div class="section">
+                                    <div class="sect-tit">
+                                        <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/GetDeptInfoList?id=21&#39;, &#39;部门发布信息查看&#39;)">更多 &gt;</a>
+                                      
+                                        
+                                        
+                                       <strong>推广 信息</strong>
+                                    </div>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=9126&#39;, &#39;信息查看&#39;)">20191231更新 </a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2019/12/31 17:45:42</span>
+                                        </li>
+                                    </ul>
+                                  
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="lvw_ctrl0_msgList">
+                            <td>
+                                <div class="section">
+                                    <div class="sect-tit">
+                                        <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/GetDeptInfoList?id=25&#39;, &#39;部门发布信息查看&#39;)">更多 &gt;</a>
+                                      
+                                        
+                                        
+                                       <strong>运营中心 信息</strong>
+                                    </div>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12371&#39;, &#39;信息查看&#39;)">关于投保康惠保2.0的用户体检卡下发通知（截止至2020年7月21日）</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/24 18:24:06</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12370&#39;, &#39;信息查看&#39;)">关于投保平安e生保2020及保证续保版2020的用户体检卡下发通知（截止至2020年7月21日）</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/24 18:21:41</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=12049&#39;, &#39;信息查看&#39;)">【信泰人寿超级玛丽max3号重疾险】七月京东卡活动</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/7/6 8:27:02</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=11909&#39;, &#39;信息查看&#39;)">【少儿护齿保 优惠活动】前300名，买3份及以上送价值588元齿科服务</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/6/28 17:42:54</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=11769&#39;, &#39;信息查看&#39;)">【活动通知】投保康惠保2.0重疾险可送体检套餐</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/6/15 15:53:35</span>
+                                        </li>
+                                    </ul>
+                               <ul class="wzList">
+
+                                        <li>
+                                            <a href="javascript:void(0)" sub="" onclick="Redirect2(&#39;/VMessageInfo/Detail?ID=11670&#39;, &#39;信息查看&#39;)">【活动通知】购平安e生保系列产品送抗癌药保障和体检卡活动细则</a>
+
+                                            
+                                            <span class="afont1" style="margin-left:15px;">2020/6/15 14:53:18</span>
+                                        </li>
+                                    </ul>
+                                  
+                                </div>
+                            </td>
+                        </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <script type="text/javascript">
+            function Redirect2(url, title) {
+
+                parent.addTab(url, title)
+
+            }
+            function RefreshTab() {
+                var currentTab = $('#tt').tabs('getSelected');
+                var url = $(currentTab.panel('options')).attr('href');
+                $('#tabs').tabs('update', {
+                    tab: currentTab,
+                    options: {
+                        href: url
+                    }
+                });
+                currentTab.panel('refresh');
+            }
+        </script>
+            </div></div></div></div>
+        </div></div>
+    <div class="layout-split-proxy-h"></div><div class="layout-split-proxy-v"></div></div>
+
+    
+
+    
+
+    <script>
+        String.prototype.startWith = function (str) {
+            var reg = new RegExp("^" + str);
+            return reg.test(this);
+        }
+        function setTimeNow() {
+            var date = new Date();
+            var hours = (Array(2).join(0) + date.getHours()).slice(-2);
+            var minutes = (Array(2).join(0) + date.getMinutes()).slice(-2);
+            var seconds = (Array(2).join(0) + date.getSeconds()).slice(-2);
+            var month = (Array(2).join(0) + (date.getMonth() + 1)).slice(-2);
+            var day = (Array(2).join(0) + date.getDate()).slice(-2);
+            var t = date.getFullYear() + '年' + month + '月' + day + '日 ' + hours + ':' + minutes + ':' + seconds;
+            $('#timeNow').text(t);
+        }
+        function changeRightSize() {
+            var ls = $('.layout-panel-west').width();
+            var bodys = $('body').width();
+            $('#rightContent').css('left', ls + 10 + 'px');
+            $('#tt .tabs-header').css('width', bodys - ls - 10 + 'px');
+            $('#tt .tabs-panels').css('width', bodys - ls - 10 + 'px');
+            $('#tt .tabs-header .tabs-wrap').css('width', 'auto');
+            $('#tt .tabs-panels .panel-body').css('width', 'auto');
+           // LeftMenuStyle();
+        }
+        function skip(url, title) {
+            //清除富文本编辑器实例
+            //UE.delEditor('editor');
+            //UE.delEditor('editor2');
+            //清除页面上的弹窗层
+            //$(".panel.window").remove();
+            //$(".window-shadow").remove();
+            //$(".window-mask").remove();
+            //$(".edui-default").remove();
+
+            //$(".global-zeroclipboard-container").remove();
+            // $.insdep.control(title.value);
+            var ST = $(title);
+            if (ST.attr('class') != undefined) {
+                title = ST.closest('p').html();
+            }
+
+            if (title == undefined) return;
+            addTab(url, title);
+        }
+
+        function addTab(url, title) {
+            //var tabs = $('.tabs-panels .panel div[class="panel-body panel-body-noheader panel-body-noborder panel-noscroll"]');
+            var tabs = $("#tt").tabs('tabs');
+            var flag = true;
+            for (var i = 0; i < tabs.length; i++) {
+             
+                // if (realUrl[0] == realUrlQ[0]) {
+                //var tabTem = $(tabs[i].panel('options').content).attr('src');
+                //if (tabTem != undefined && tabTem.toLowerCase().startWith("power/menulist")) {
+                //    var Urlarr = tabTem.split("?");
+                //    var realurl=url.split("?");
+                //    if (Urlarr[0] == realurl[0]) {
+                //        $('#tt').tabs('select', title);//选中并刷新
+                //        var selTab = $('#tt').tabs('getSelected');
+                //       // var url = $(selTab.panel('options').content).attr('src');
+                //        $('#tt').tabs('update', {
+                //            tab: selTab,
+                //            options: {
+                //                title: title,
+                //                content: '<iframe src="' + url + '" style="width:100%;height:100%;" frameborder=0  scrolling=auto></iframe>',
+                //                closable: true
+                //            }
+                //        })
+                //        flag = false;
+                //    }
+                    
+                //}
+                if ($(tabs[i].panel('options').content).attr('src') == url) {
+                    $('#tt').tabs('select', title);//选中并刷新
+                    var selTab = $('#tt').tabs('getSelected');
+                    var url = $(selTab.panel('options').content).attr('src');
+                    $('#tt').tabs('update', {
+                        tab: selTab,
+                        options: {
+                            title: title,
+                            content: '<iframe src="' + url + '" style="width:100%;height:99%;" frameborder=0  scrolling=auto></iframe>',
+                            closable: true
+                        }
+                    })
+                    flag = false;
+                }
+            }
+            if (flag) {
+                $('#tt').tabs('add', {
+                    title: title,
+                    content: '<iframe src="' + url + '" style="width:100%;height:99%;" frameborder=0  scrolling=auto></iframe>',
+                    closable: true
+                });
+            }
+            //if ($('#tt').tabs('exists', title)) {
+            //    $('#tt').tabs('select', title);//选中并刷新
+            //    var selTab = $('#tt').tabs('getSelected');
+            //    var url = $(selTab.panel('options').content).attr('src');
+            //    $('#tt').tabs('update', {
+            //        tab: selTab,
+            //        options: {
+            //            title: title,
+            //            content: '<iframe src="' + url + '" style="width:100%;height:100%;" frameborder=0  scrolling=auto></iframe>',
+            //            closable: true
+            //        }
+            //    })
+
+            //} else {
+            //    $('#tt').tabs('add', {
+            //        title: title,
+            //        content: '<iframe src="' + url + '" style="width:100%;height:100%;" frameborder=0  scrolling=auto></iframe>',
+            //        closable: true
+            //    });
+            //}
+
+        }
+      
+        function CloseTab(type) {
+            //tab组件对象
+            var tabs = $('#tt');
+            //tab组件右键菜单对象
+            var tab_menu = $('#tmm');
+
+            //获取当前tab的标题
+            var curTabTitle = tab_menu.data('tabTitle');
+
+            //关闭当前tab
+            if (type === 'tab_menu-tabclose') {
+                //通过标题关闭tab
+                tabs.tabs("close", curTabTitle);
+            }
+
+                //关闭全部tab
+            else if (type === 'tab_menu-tabcloseall') {
+                //获取所有关闭的tab对象
+                var closeTabsTitle = getAllTabObj(tabs);
+                //循环删除要关闭的tab
+                $.each(closeTabsTitle, function () {
+                    var title = this;
+                    tabs.tabs('close', title);
+                });
+            }
+
+                //关闭其他tab
+            else if (type === 'tab_menu-tabcloseother') {
+                //获取所有关闭的tab对象
+                var closeTabsTitle = getAllTabObj(tabs);
+                //循环删除要关闭的tab
+                $.each(closeTabsTitle, function () {
+                    var title = this;
+                    if (title != curTabTitle) {
+                        tabs.tabs('close', title);
+                    }
+                });
+            }
+
+                //关闭当前左侧tab
+            else if (type === 'tab_menu-tabcloseleft') {
+                //获取所有关闭的tab对象
+                var closeTabsTitle = getLeftToCurrTabObj(tabs, curTabTitle);
+                //循环删除要关闭的tab
+                $.each(closeTabsTitle, function () {
+                    var title = this;
+                    tabs.tabs('close', title);
+                });
+            }
+
+                //关闭当前右侧tab
+            else if (type === 'tab_menu-tabcloseright') {
+                //获取所有关闭的tab对象
+                var closeTabsTitle = getRightToCurrTabObj(tabs, curTabTitle);
+                //循环删除要关闭的tab
+                $.each(closeTabsTitle, function () {
+                    var title = this;
+                    tabs.tabs('close', title);
+                });
+            }
+        }
+
+        function getAllTabObj(tabs) {
+            //存放所有tab标题
+            var closeTabsTitle = [];
+            //所有所有tab对象
+            var allTabs = tabs.tabs('tabs');
+            $.each(allTabs, function () {
+                var tab = this;
+                var opt = tab.panel('options');
+                //获取标题
+                var title = opt.title;
+                //是否可关闭 ture:会显示一个关闭按钮，点击该按钮将关闭选项卡
+                var closable = opt.closable;
+                if (closable) {
+                    closeTabsTitle.push(title);
+                }
+            });
+            return closeTabsTitle;
+        }
+
+        function getRightToCurrTabObj(tabs, curTabTitle) {
+            //存放所有tab标题
+            var closeTabsTitle = [];
+            //所有所有tab对象
+            var allTabs = tabs.tabs('tabs');
+            for (var i = (allTabs.length - 1) ; i >= 0; i--) {
+                var tab = allTabs[i];
+                var opt = tab.panel('options');
+                //获取标题
+                var title = opt.title;
+                //是否可关闭 ture:会显示一个关闭按钮，点击该按钮将关闭选项卡
+                var closable = opt.closable;
+                if (closable) {
+                    //alert('title' + title + '  curTabTitle:' + curTabTitle);
+                    if (title == curTabTitle) {
+                        return closeTabsTitle;
+                    }
+                    closeTabsTitle.push(title);
+                }
+            }
+            return closeTabsTitle;
+        }
+
+        function getLeftToCurrTabObj(tabs, curTabTitle) {
+            //存放所有tab标题
+            var closeTabsTitle = [];
+            //所有所有tab对象
+            var allTabs = tabs.tabs('tabs');
+            for (var i = 0; i < allTabs.length; i++) {
+                var tab = allTabs[i];
+                var opt = tab.panel('options');
+                //获取标题
+                var title = opt.title;
+                //是否可关闭 ture:会显示一个关闭按钮，点击该按钮将关闭选项卡
+                var closable = opt.closable;
+                if (closable) {
+                    //alert('title' + title + '  curTabTitle:' + curTabTitle);
+                    if (title == curTabTitle) {
+                        return closeTabsTitle;
+                    }
+                    closeTabsTitle.push(title);
+                }
+            }
+            return closeTabsTitle;
+        }
+
+
+        $(function () {
+
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true/*布局框架全屏*/
+            });
+
+            //设置当前时间
+            setInterval(setTimeNow, 1000);
+
+            $(".easyui-datalist").datalist({
+
+                onSelect: function (index, title) {
+                    var text = title.text.replace("&gt;&gt;&gt;", "");
+                    skip(title.value, text);
+                },
+                onResize: function () {
+                    changeRightSize();
+                },
+                onRowContextMenu: function (e, index, row) {
+                    e.preventDefault();
+                    $('#contextMenu_jygl').menu('show', {
+                        left: e.pageX,//在鼠标点击处显示菜单
+                        top: e.pageY
+                    });
+                    $("#a_new").attr("href", row.value);
+                }
+            })
+
+            /*右侧菜单控制部分*/
+
+            var left_control_status = true;
+            var left_control_panel = $("#master-layout").layout("panel", 'west');
+
+            $(".left-control-switch").on("click", function () {
+                if (left_control_status) {
+                    left_control_panel.panel('resize', { width: 70 });
+                    left_control_status = false;
+                    $(".theme-left-normal").hide();
+                    $(".theme-left-minimal").show();
+                } else {
+                    left_control_panel.panel('resize', { width: 200 });
+                    left_control_status = true;
+                    $(".theme-left-normal").show();
+                    $(".theme-left-minimal").hide();
+                }
+                $("#master-layout").layout('resize', { width: '100%' })
+            });
+
+            /*右侧菜单控制结束*/
+            $(".theme-navigate-user-modify").on("click", function () {
+                $('.theme-navigate-user-panel').menu('hide');
+                $.insdep.window({ id: "personal-set-window", href: "user.html", title: "修改资料" });
+
+            });
+
+            $('#tt').tabs({
+                onContextMenu: function (e, title, index) {
+                    e.preventDefault();
+                    if (index > 0) {
+                        $('#tmm').menu('show', {
+                            left: e.pageX,
+                            top: e.pageY
+                        }).data("tabTitle", title);
+                    }
+                }
+            });
+            //右键菜单click
+            $("#tmm").menu({
+                onClick: function (item) {
+                    CloseTab(item.name);
+                }
+            });
+
+        });
+        function doSearch(value, name) {
+            alert('You input: ' + value + '(' + name + ')');
+        }
+
+
+        function LeftMenuStyle() {
+            $(".easyui-accordion.accordion.accordion-noborder.easyui-fluid").css('height', 'auto');
+            var menuList = $(".datagrid-wrap.panel-body.panel-body-noheader.panel-body-noborder .datagrid-btable");
+            var menus = $(".panel-noscroll.panel-body.accordion-body");
+            var panelList = $(".datagrid-wrap.panel-body.panel-body-noheader.panel-body-noborder");
+            var panelViewList = $(".datagrid-view");
+            var panelBodyList = $(".datagrid-view2 .datagrid-body");
+            //var view2
+            for (var i = 0; i < menuList.length; i++) {
+                var a = menuList[i];
+                //子panel的高度
+                var alength = $(a).find("tr").length * 35;
+                var menu = menus[i];
+                $(menu).css("height", alength);
+
+                var panels = panelList[i];
+                var panelViews = panelViewList[i];
+                var panelBodys = panelBodyList[i];
+                $(panels).css("height", alength);
+                $(panelViews).css("height", alength);
+              
+                $(panelBodys).css("height", alength);
+            }
+        }
+
+    </script>
+
+
+    <!--第三方插件加载-->
+    <script src="./mainindex_files/raphael-2.1.4.min.js.下载"></script>
+    <script src="./mainindex_files/justgage.js.下载"></script>
+
+    <link href="./mainindex_files/ueditor.css" rel="stylesheet">
+    <script src="./mainindex_files/highcharts.js.下载"></script>
+    <script src="./mainindex_files/ueditor.config.js.下载"></script>
+    <script src="./mainindex_files/ueditor.all.js.下载"></script>
+    
+    
+
+
+    <link href="./mainindex_files/cropper.min.css" rel="stylesheet" type="text/css">
+    <script src="./mainindex_files/cropper.min.js.下载"></script>
+    <script src="./mainindex_files/zh-cn.js.下载"></script>
+    <script src="./mainindex_files/PowerMonitor.js.下载"></script>
+    
+    <!--第三方插件加载结束-->
+    <script>
+        $(function () {
+            LeftMenuStyle();
+            var timer = 0;
+            $(window).resize(function () {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    window.onload = LeftMenuStyle();
+                }, 100);
+            });          
+           
+        })  
+    </script>
+
+
+
+
+
+<div id="tmm" class="easyui-menu menu-top menu" style="width: 148px; height: 162px; overflow: hidden; display: none; left: 0px; top: 0px;"><div class="menu-line" style="height: 172px;"></div>
+        <div name="tab_menu-tabclose" class="menu-item" style="height: 20px;"><div class="menu-text" style="height: 20px; line-height: 20px;">关闭</div></div>
+        <div class="menu-sep"></div>
+        <div name="tab_menu-tabcloseall" class="menu-item" style="height: 20px;"><div class="menu-text" style="height: 20px; line-height: 20px;">关闭全部标签</div></div>
+        <div name="tab_menu-tabcloseother" class="menu-item" style="height: 20px;"><div class="menu-text" style="height: 20px; line-height: 20px;">关闭其他标签</div></div>
+        <div class="menu-sep"></div>
+        <div name="tab_menu-tabcloseright" class="menu-item" style="height: 20px;"><div class="menu-text" style="height: 20px; line-height: 20px;">关闭右侧标签</div></div>
+        <div name="tab_menu-tabcloseleft" class="menu-item" style="height: 20px;"><div class="menu-text" style="height: 20px; line-height: 20px;">关闭左侧标签</div></div>
+    </div><div id="contextMenu_jygl" class="easyui-menu menu-top menu" style="width: 118px; height: 16px; overflow: hidden; display: none; left: 0px; top: 0px;"><div class="menu-line" style="height: 26px;"></div>
+        <a href="https://manage2018.zhongmin.cn/Home/MainIndex#" target="_blank" id="a_new" style="text-align:center;">
+            <div id="btn_new" data-options="iconCls:&#39;icon-ok&#39;">新标签打开</div>
+        </a>
+    </div><div class="theme-navigate-user-panel menu-top menu" style="min-width: 118px; height: 165px; overflow: hidden; display: none; left: 0px; top: 0px;"><div class="menu-line" style="height: 164px;"></div>
+                        <dl>
+                            <dd>
+                                <img src="./mainindex_files/portrait86x86.png" width="86" height="86">
+                                <b class="badge-prompt">linzy<i class="badge color-important">10</i></b>
+                                <span>林紫英</span>
+                                <p>安全等级：<i class="text-success">高</i></p>
+                            </dd>
+                            <dt>
+                                
+                                <a class="theme-navigate-user-logout" href="https://manage2018.zhongmin.cn/login/logOut">注销</a>
+                            </dt>
+                        </dl>
+                       
+                    </div></body></html>

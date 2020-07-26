@@ -1,0 +1,158 @@
+﻿/*
+    在JQuery EasyUI 1.5.x of Insdep Theme 1.0.0
+    基础上自定义中民主题
+*/
+
+.theme-left-layout .layout .layout-panel-north .panel-body-noheader {
+    
+    /*  深蓝色
+        background-color:#3D96C9;
+        border-top:1px solid #5AB8EF;
+    */
+    background-color: #04527D;
+    color:#fff;
+    line-height:35px;
+    padding-left:13px;
+    height:35px !important;
+}
+ .theme-left-layout{
+     background-color:#fff;
+     border-right: 1px solid #aaa;
+ }
+    .theme-left-layout .panel-title {
+        color: #000;
+    }
+    .theme-left-layout .panel-header,.theme-left-layout .panel-body {
+        border-color: #95B9E7;
+    }
+    .theme-left-layout .theme-left-switch {
+        background-color: #3D96C9;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .theme-left-layout .datagrid-row-selected, .theme-left-layout .datagrid-row-over, .theme-left-layout .accordion-header-selected .accordion .accordion-collapse:link, .accordion .accordion-collapse:visited, .accordion .accordion-collapse:hover, .accordion .accordion-collapse:active, .accordion .accordion-collapse:focus, .accordion .accordion-expand:link, .accordion .accordion-expand:visited, .accordion .accordion-expand:hover, .accordion .accordion-expand:active {
+        background-color: transparent !important;
+    }
+    .theme-left-layout .theme-left-normal .datalist .datagrid-cell {
+        padding: 0;
+    }
+    .theme-left-layout .datagrid-row-selected .datalist .datagrid-cell, .theme-left-layout .datagrid-row-over .datalist .datagrid-cell{
+         background-color: #E6F0FF !important;
+         border:1px solid #fff;
+         margin:8px 15px 8px 30px;
+    }
+    .theme-left-layout .theme-left-normal .datalist .datagrid-cell {
+        color: #000;
+        margin: 8px 15px 8px 22px;
+    }
+   .theme-left-layout .theme-left-normal .datalist .datagrid-row-over .datagrid-cell,.theme-left-layout .theme-left-normal .datalist .datagrid-row-selected .datagrid-cell{
+         margin:4px 11px 4px 18px;
+         padding:4px 8px;
+         background-color: #E6F0FF !important;
+         border:1px solid #9ABCE9;
+         color:rgb(71,106,167);
+    }
+    .theme-left-layout .accordion .accordion-header {
+        background-color:#E6F0FF;
+    }
+.text-success {
+    color: #00FF00 !important;
+}
+.theme-left-user-panel dl dd span{
+        color: #aaa;
+}
+.theme-header-layout {
+    background: #0076CD url(./icons/logo.jpg) left center no-repeat;
+    background-position:15px;
+    background-size:200px;
+    height: 68px !important;
+}
+.theme-navigate-user-button.l-btn-plain {
+    background: #04527D;
+    border-radius:10px;
+}
+.theme-navigate .l-btn:hover{
+    background-color:#00BFFF;
+}
+.theme-navigate-search + .searchbox{
+    background-color: #fff;
+}
+.theme-navigate .searchbox .l-btn:hover{
+    background-color:#F0F8FF;
+}
+.theme-navigate-search + .searchbox{
+    border-radius:5px;
+    padding-top:4px;
+    height: 27px !important;
+}
+.theme-navigate-search + .searchbox .textbox-addon-right{
+    padding-top:3px;
+}
+.theme-left-layout .theme-left-minimal .datagrid-btable, .theme-left-layout .theme-left-minimal .datagrid-btable a{
+    color:#333;
+}
+.theme-left-layout .theme-left-minimal .datagrid-row-over,.theme-left-layout .theme-left-minimal .datagrid-row-over a{
+    color:#fff;
+}
+.theme-left-layout .theme-left-switch:hover{
+    background-color:#00BFFF;
+}
+.datagrid-row-over {
+     background-color:#F0F9FD;
+}
+.theme-navigate {
+    padding-top:15px;
+}
+.theme-navigate-more-panel {
+    top: 52px !important;
+}
+.theme-navigate .m-btn-plain-active{
+    background-color:#00bfff;
+}
+.theme-left-layout .panel-header, .theme-left-layout .panel-body, .theme-left-layout .accordion{
+    border-color:#95B9E7;
+}
+.theme-left-layout{
+     border-color:#95B9E7;
+     border-top:0;
+     border-bottom:0;
+}
+body{
+    background-color:#E7EFF9;
+}
+.tabs-header, .tabs-scroller-left, .tabs-scroller-right, .tabs-tool, .tabs, .tabs-panels, .tabs li a.tabs-inner, .tabs li.tabs-selected a.tabs-inner, .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner, .tabs-header-left .tabs li.tabs-selected a.tabs-inner, .tabs-header-right .tabs li.tabs-selected a.tabs-inner{
+    border-color:#95B9E7;
+}
+.tabs li a.tabs-inner{
+    border-radius:5px 5px 0 0;
+    background-color:#EBF1FF;
+    font-weight: bold;
+}
+.tabs .tabs-selected{
+    background-color:#F8FBFF;
+}
+.tabs-p-tool a:hover, .tabs li a:hover.tabs-close, .tabs-scroller-over {
+    background-color: transparent ;
+}
+.tabs-header{
+    background-color:#E1EDFF;
+}
+.tabs-scroller-left, .tabs-scroller-right, .tabs li a.tabs-close{
+    background-image:url(../default/images/tabs_icons.png);
+}
+.accordion-collapse, .accordion-expand{
+    background-image: url(../default/images/accordion_arrows.png)
+}
+.theme-left-layout .panel-header {
+    padding-left:10px;
+}
+.panel-tool a {
+    width:16px;
+    height:16px;
+}
+.panel-tool{
+    top:55%;
+}
+.accordion-expand {
+    background-position: -16px 1px;
+}
