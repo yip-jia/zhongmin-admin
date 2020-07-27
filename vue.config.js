@@ -1,7 +1,7 @@
 const path = require('path')
 const bodyParser = require('body-parser')
 const axios = require('axios')
-const cookie ='ASP.NET_SessionId=ny0z44zhsoyoq453hfrnqgkz; cookAdminID=170; cookAdmin=linzy; adminUserName=%e6%b5%8b%e8%af%95%e7%bb%84%ef%bc%8d%e6%9e%97%e7%b4%ab%e8%8b%b1; encId=4B28EE46953C64486550D4437ED9CC40'
+const cookie = 'ASP.NET_SessionId=ny0z44zhsoyoq453hfrnqgkz; cookAdminID=170; cookAdmin=linzy; adminUserName=%e6%b5%8b%e8%af%95%e7%bb%84%ef%bc%8d%e6%9e%97%e7%b4%ab%e8%8b%b1; encId=4B28EE46953C64486550D4437ED9CC40'
 
 module.exports = {
     // 让vant框架支持rem
@@ -41,7 +41,7 @@ module.exports = {
                 })
             })
         },
-        host: '192.168.3.49',
+        host: '192.168.1.101',
         port: 8080,
         /*   proxy: {
               '/': {

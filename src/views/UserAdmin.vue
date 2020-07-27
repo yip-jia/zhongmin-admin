@@ -6,7 +6,7 @@
               align="middle">
         <el-col :span="2.5">信息检索：</el-col>
         <el-col :span="4">
-          <el-select v-model="value"
+          <el-select v-model="serachType"
                      placeholder="请选择">
             <el-option v-for="item in options"
                        :key="item.value"
@@ -16,11 +16,14 @@
           </el-select>
         </el-col>
         <el-col :span="4">
-          <el-input v-model="input"
+          <el-input v-model="searchText"
                     placeholder="请输入内容"></el-input>
         </el-col>
-        <el-col :span="3">
-          <el-button type="primary">主要按钮</el-button>
+        <el-col :span="2">
+          <el-button type="primary" @click="searchUser">查找</el-button>
+        </el-col>
+         <el-col :span="3">
+          <el-button type="info" @click="clearSearch">清除搜索</el-button>
         </el-col>
       </el-row>
       <!-- 表格 -->
@@ -137,8 +140,8 @@ export default {
         label: '证件号'
       }
       ],
-      value: '',
-      input: '',
+      serachType: '',
+      searchText: '',
       tableData: []
     }
   },
@@ -185,6 +188,14 @@ export default {
     handleCurrentChange (currentpage) {
       this.currentpage = currentpage
       this.getUserList(currentpage,this.pagesize)
+    },
+    searchUser() {
+       this.getUserList(this.currentpage,this.pagesize,this.serachType,this.searchText)
+    },
+    clearSearch() {
+      this.serachType = -1
+      this.searchText = ''
+      this.getUserList()
     }
 
   }

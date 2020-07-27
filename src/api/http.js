@@ -1,6 +1,7 @@
 import axios from 'axios'
 import orderAPI from './order'
-
+import { Loading } from 'element-ui';
+let loadingInstance
 
 // obj 循环遍历输出不同的请求方法
 
@@ -60,13 +61,12 @@ for (let key in obj) {
 // 拦截器的添加
 // 请求拦截器
 instance.interceptors.request.use(config => {
-  // 发起请求前做些什么
-  /* Toast.loading({
-    mask: false,
-    duration: 0, // 一直存在
-    forbidClick:true, // 禁止点击
-message:'加载中...'
-  }) */
+  loadingInstance = Loading.service({
+    lock: true,
+    text: '拼命请求中',
+    spinner: 'el-icon-loading',
+    background: 'rgba(0, 0, 0, 0.7)'
+  });
   return config
 }, () => {
   // 请求错误
@@ -76,7 +76,7 @@ message:'加载中...'
 // 响应拦截器
 instance.interceptors.response.use(res => {
   // 请求成功
-  /* Toast.clear() */
+  loadingInstance.close();
   return res.data
 }, error => {
 

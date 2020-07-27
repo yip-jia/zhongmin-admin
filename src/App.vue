@@ -11,7 +11,7 @@
           <el-menu active-text-color="#409EFF" :router="true">
             <el-submenu index="1">
               <template slot="title">
-                 <i class="el-icon-s-order"></i>
+                 <i class="el-icon-user"></i>
                   <span>用户管理</span>
               </template>
               <el-menu-item-group>
@@ -67,11 +67,9 @@ export default {
 
 .fixed {
   position: fixed;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
-
-
 </style>
