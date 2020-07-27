@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <el-container>
+     <el-container class="fixed">
        <!-- 头部 -->
       <el-header height="68px" class="header">
         <img :src="imgsrc" alt="中民logo">
@@ -30,7 +30,7 @@
           </el-menu>
         </el-aside>
         <!-- 内容 -->
-      <el-main>
+      <el-main class="el-main" >
         <router-view></router-view>
       </el-main>
       </el-container>
@@ -64,4 +64,14 @@ export default {
     width: 200px;
   }
 }
+
+.fixed {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0
+}
+
+
 </style>
