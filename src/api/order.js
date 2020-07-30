@@ -4,9 +4,13 @@ const orderAPI = {
         url: '/Account/GetUserList'
     },
     getTotalAll: {
-      method: 'post',
-      url: '/FinancialStatis/getTotalAll'
-  },
+        method: 'post',
+        url: '/FinancialStatis/getTotalAll'
+    },
+    getFinanceCharts: {
+        method: 'get',
+        url: '/FinancialStatis/GetFinanceCharts'
+    }
 }
 
 export default orderAPI

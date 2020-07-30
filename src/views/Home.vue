@@ -3,8 +3,8 @@
     <el-row class="row">
       <el-col>
         <div class="inner">
-          <h4 class="title">累计销售额</h4>
-          <p class="value">{{totalSale}}</p>
+          <h4 class="title">累计中民佣金</h4>
+          <p class="value">{{commission}}</p>
           <p></p>
           <div  id="main"></div>
         </div>
@@ -18,17 +18,26 @@
 
 <script>
 import echarts from 'echarts';
+import { setTimeout } from 'timers';
 
 export default {
   created () {
     this.getTotalAll()
+    this.getFinanceCharts()
   },
   mounted () {
-    this.myEcharts();
+     let _this =this
+     setTimeout(function() {
+        _this.myEcharts();
+     },5000)
+  
   },
   data() {
     return {
-      totalSale:''
+      totalSale:'',
+      commission: '',
+      commissionData:[],
+      commissionDate:[]
     }
   },
   methods: {
@@ -38,20 +47,41 @@ export default {
 
       // 指定图表的配置项和数据
       var option = {
-        tooltip: {},
+        
+        tooltip: {
+          show: true,
+          trigger: 'axis'
+        },
+        grid:{
+          left:'0', 
+          right:'0', 
+          top:0, 
+          bottom:0,          
+        },
         legend: {
           data: ['销量']
         },
         xAxis: {
-          data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+          data: this.commissionDate, 
+          fontSize: 4,
+          axisTick: {
+            show: false
+          },
+          show : false,
         },
         yAxis: {
           show: false
         },
         series: [{
-          
           type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
+          symbol: 'none',
+          data: this.commissionData,
+          itemStyle: {
+            normal: {
+              color: '#F56C6C' //改变区域颜色
+            }
+              
+          },
         }]
       }
 
@@ -72,6 +102,26 @@ export default {
       }
       this.totalSale = `￥${tot.toLocaleString()}`
      
+    },
+    async getFinanceCharts() {
+      var params = {
+      beginDate: '',
+      endDate: '',
+      channel: -1,
+      selCompany: -1
+    }
+      let res = await this.$Http.getFinanceCharts(params)
+      let total = 0
+      let arry = []
+      let date = []
+      for(let i in res.IC) {
+        total += parseInt(res.IC[i][1])
+        arry.push(res.IC[i][1])
+        date.push(`${parseInt(i)+1}日`)
+      }
+      this.commissionData = arry
+      this.commissionDate = date
+      this.commission = `￥${total.toLocaleString()}`
     }
   }
 }
@@ -80,7 +130,7 @@ export default {
 <style lang="scss" scoped>
 #main {
   width: 100%;
-  height: 50px;
+  height: 100px;
 }
 .row {
   display: flex;
@@ -88,23 +138,23 @@ export default {
   align-items: center;
 }
 .row .el-col {
-  width:33.33%;
+  width: 33.33%;
   padding: 20px;
   box-sizing: border-box;
 }
-.inner{
+.inner {
   background: #fff;
-  padding:20px;
+  padding: 20px;
 }
 .value {
-    font-size: 25px;
-    color: #000;
-    margin-top: 5px;
-    letter-spacing: 1px;
+  font-size: 25px;
+  color: #000;
+  margin-top: 5px;
+  letter-spacing: 1px;
 }
 .title {
-    font-size: 12px;
-    color: #999;
+  font-size: 12px;
+  color: #999;
 }
 </style>
 
