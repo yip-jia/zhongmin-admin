@@ -30,7 +30,7 @@
           </el-menu>
         </el-aside>
         <!-- 内容 -->
-      <el-main class="el-main" >
+      <el-main class="el-main main" >
         <router-view></router-view>
       </el-main>
       </el-container>
@@ -71,5 +71,9 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
+}
+.main{
+  height: calc(100 *1vh - 68px);
+  background: #f5f5f5;
 }
 </style>
