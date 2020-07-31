@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const axios = require('axios')
 const cookie = 'ASP.NET_SessionId=wmsmgyjyrlaeu4pyl3eq2yyv; cookAdminID=170; cookAdmin=linzy; adminUserName=%e6%b5%8b%e8%af%95%e7%bb%84%ef%bc%8d%e6%9e%97%e7%b4%ab%e8%8b%b1; encId=4B28EE46953C64486550D4437ED9CC40'
 const qs = require('qs')
-axios.defaults.timeout = 15000;
+axios.defaults.timeout = 35000;
 
 module.exports = {
   // 让vant框架支持rem
@@ -79,7 +79,7 @@ module.exports = {
         })
 
     },
-    host: '192.168.1.101',
+    host: '192.168.3.49', // 192.168.1.101
     port: 8080,
     /*   proxy: {
           '/': {
