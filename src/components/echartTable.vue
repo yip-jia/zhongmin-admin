@@ -1,7 +1,7 @@
 <template>
   <div>
     <div ref="chartEl"
-         style="height:100%"></div>
+         :style="eStyle"></div>
   </div>
 </template>
 
@@ -12,6 +12,11 @@ export default {
     return {
       chart: null
     }
+  },
+  props: {
+    eStyle: {
+      type:Object
+    },
   },
   methods: {
     setOption (option) {
