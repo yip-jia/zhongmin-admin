@@ -35,7 +35,9 @@
           end-placeholder="结束日期"
           size="small"
           value-format="yyyy-MM-dd"
-          style="float:right">
+          style="float:right"
+          @blur="changeDate"
+          :picker-options="pickerOptions">
        </el-date-picker>
     </div>
   <el-row class="prolist">
@@ -48,7 +50,7 @@
         <li class="listitem" v-for="(item, index) in productsort" :key="index" >
           <span class="listleft">{{index+1}}</span>
           <span class="listcenter">{{item.name}}</span>
-          <span class="listright">{{item.value}}</span>
+          <span class="listright">{{item.value}}单</span>
         </li>
       </ul>
     </el-col>
@@ -76,7 +78,7 @@ export default {
       _this.salEcharts()
       _this.salcommissionEcharts()
     })
-    this.getTotalAll().then(()=> {
+    this.getTotalAll(this.dateValue).then(()=> {
       _this.productionEcharts()
     })
   },
@@ -99,7 +101,12 @@ export default {
       sale: '',
       saleData: [],
       productsort:[],
-      productsortTip:[]
+      productsortTip:[],
+       pickerOptions: {
+          disabledDate(time) {
+            return time.getTime() > Date.now();
+          }
+       }
     }
   },
   methods: {
@@ -278,10 +285,10 @@ export default {
       this.$refs.pieTable.setOption(option)
     },
 
-    async getTotalAll () {
+    async getTotalAll (date) {
       var params = {
-        beginTime: this.dateValue[0],
-        endTime: this.dateValue[1],
+        beginTime: date[0],
+        endTime: date[1],
         companyId: -1,
         statisticsType: 1,
       }
@@ -343,6 +350,12 @@ export default {
       this.commission = `￥${ictotal.toLocaleString()}`
       this.salecommission = `￥${sctotal.toLocaleString()}`
       this.sale = `￥${smtotal.toLocaleString()}`
+    },
+    changeDate() {
+      let _this =this
+      this.getTotalAll(this.dateValue).then(()=> {
+      _this.productionEcharts()
+    })
     }
   }
 }

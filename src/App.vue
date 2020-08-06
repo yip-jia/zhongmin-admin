@@ -9,7 +9,11 @@
       <el-container>
         <el-aside width="200px" class="el-aside">
           <el-menu active-text-color="#409EFF" :router="true">
-            <el-submenu index="1">
+            <el-menu-item index="/">
+               <i class="el-icon-house"></i>
+              <span slot="title">首页</span>
+            </el-menu-item>
+            <el-submenu index="2">
               <template slot="title">
                  <i class="el-icon-user"></i>
                   <span>用户管理</span>
@@ -18,10 +22,10 @@
                 <el-menu-item index="/userAdmin">
                   中民用户管理
                 </el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
+                <el-menu-item index="2-2">选项2</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="2">
+            <el-submenu index="3">
               <template slot="title">
                  <i class="el-icon-s-order"></i>
                   <span>订单管理</span>
@@ -72,8 +76,9 @@ export default {
   top: 0;
   bottom: 0;
 }
-.main{
-  height: calc(100 *1vh - 68px);
+.main {
+  position: relative;
+  height: calc(100 * 1vh - 68px);
   background: #f5f5f5;
 }
 </style>

@@ -65,7 +65,8 @@ instance.interceptors.request.use(config => {
     lock: true,
     text: '拼命请求中',
     spinner: 'el-icon-loading',
-    background: 'rgba(0, 0, 0, 0.7)'
+    background: 'rgba(255, 255, 255, 0.7)',
+
   });
   return config
 }, () => {
@@ -76,7 +77,7 @@ instance.interceptors.request.use(config => {
 // 响应拦截器
 instance.interceptors.response.use(res => {
   // 请求成功
-  loadingInstance.close();
+  loadingInstance.close()
   return res.data
 }, error => {
 
