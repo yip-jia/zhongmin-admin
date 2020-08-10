@@ -18,17 +18,29 @@ const ansyncRoutesMap = [ // eslint-disable-line no-unused-vars
     name: 'Home',
     component: () => import('../views/Home.vue'),
     meta: {
-     title: '首页'
+      title: '首页',
+      icon: 'el-icon-house'
     }
   },
   {
-    path: '/userAdmin',
-    name: 'UserAdmin',
-    component: () => import('../views/UserAdmin.vue'),
+    path: '/user',
+    name: 'user',
+    redirect: '/user/userAdmin',
     meta: {
-      role: ['admin'],
-      title: '中民用户管理'
-    }
+      title: '用户管理',
+      icon: 'el-icon-house'
+    },
+    children: [
+      {
+        path: 'userAdmin',
+        name: 'userAdmin',
+        component: () => import('../views/UserAdmin.vue'),
+        meta: {
+          role: ['admin'],
+          title: '中民用户管理',
+        }
+      }
+    ]
   },
   {
     path: '/orderList',
