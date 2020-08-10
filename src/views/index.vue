@@ -7,9 +7,9 @@
       </el-header>
       <!-- 侧边栏 -->
       <el-container>
-        <el-aside width="200px" class="el-aside">
-         
-          <el-menu active-text-color="#409EFF" :router="true">
+        <el-aside width="200px" class="el-aside" >
+          <Sidebar :menuList="menuList"></Sidebar>
+          <!-- <el-menu active-text-color="#409EFF" :router="true">
             <el-menu-item index="/">
                <i class="el-icon-house"></i>
                <span slot="title">首页</span>
@@ -32,7 +32,7 @@
                   <span>订单管理</span>
               </template>              
             </el-submenu>
-          </el-menu>
+          </el-menu> -->
          
         </el-aside>
         <!-- 内容 -->
@@ -45,12 +45,22 @@
 </template>
 
 <script>
+import Sidebar from '../components/Sidebar'
+import { setTimeout } from 'timers';
+//import { setTimeout } from 'timers';
 export default {
+    mounted() {
+      setTimeout(() => {
+         this.menuList = this.$store.state.login.addRouters
+      },3000)
+    },
     data() {
          return {
-            imgsrc: require('../assets/img/logo.jpg')
+            imgsrc: require('../assets/img/logo.jpg'),
+            menuList:[]
          }
-    }
+    },
+    components:{Sidebar},
 }
 </script>
 
