@@ -8,8 +8,8 @@
       <!-- 侧边栏 -->
       <el-container>
         <el-aside width="200px" class="el-aside" >
-          <Sidebar :menuList="menuList"></Sidebar>
-          <!-- <el-menu active-text-color="#409EFF" :router="true">
+           <Sidebar :menuList="menuList"></Sidebar> 
+           <!-- <el-menu active-text-color="#409EFF" :router="true">
             <el-menu-item index="/">
                <i class="el-icon-house"></i>
                <span slot="title">首页</span>
@@ -20,7 +20,7 @@
                   <span>用户管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="/userAdmin">
+                <el-menu-item index="/user/userAdmin">
                   中民用户管理
                 </el-menu-item>
                 <el-menu-item index="2-2">选项2</el-menu-item>
@@ -32,12 +32,12 @@
                   <span>订单管理</span>
               </template>              
             </el-submenu>
-          </el-menu> -->
+          </el-menu>  -->
          
         </el-aside>
         <!-- 内容 -->
       <el-main class="el-main main" >
-          <router-view />
+          <router-view :key="this.$route.path"/>
       </el-main>
       </el-container>
     </el-container> 
@@ -60,7 +60,7 @@ export default {
             menuList:[]
          }
     },
-    components:{Sidebar},
+     components:{Sidebar}, 
 }
 </script>
 

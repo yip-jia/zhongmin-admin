@@ -1,20 +1,31 @@
 const constantRouterMap = [
   {
+    path: '/',
+    name: 'Index',
+    redirect: '/home',
+    component: () => import('../views/index.vue'),
+    children:[
+      {
+        path: '/home',
+        name: 'Home',
+        component: () => import('../views/Home.vue'),
+      }
+    ]
+  },
+  {
     path: '/login',
     name: 'Login',
     meta: {
       unrequiresAuth: true
     },
-    components: {
-      login: () => import('../views/login.vue')
-    }
-  }
+    component: () => import('../views/login.vue')
+  },
 ]
 
 
 const ansyncRoutesMap = [ // eslint-disable-line no-unused-vars
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: () => import('../views/Home.vue'),
     meta: {
@@ -25,10 +36,11 @@ const ansyncRoutesMap = [ // eslint-disable-line no-unused-vars
   {
     path: '/user',
     name: 'user',
+    component: () => import('../views/index.vue'),
     redirect: '/user/userAdmin',
     meta: {
       title: '用户管理',
-      icon: 'el-icon-house'
+      icon: 'el-icon-user'
     },
     children: [
       {
@@ -47,7 +59,8 @@ const ansyncRoutesMap = [ // eslint-disable-line no-unused-vars
     name: 'orderList',
     component: () => import('../views/orderList.vue'),
     meta: {
-      role: ['admin', 'guest']
+      role: ['admin', 'guest'],
+      title: '订单管理',
     }
   }
 ]
