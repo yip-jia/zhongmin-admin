@@ -62,8 +62,8 @@
 
 <script>
 
-import echartTable from '../components/echartTable'
-import { formatDate } from '../assets/js/util.js'
+import echartTable from '../../components/echartTable'
+import { formatDate } from '../../assets/js/util.js'
 
 export default {
   components: {

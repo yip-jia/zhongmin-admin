@@ -1,14 +1,17 @@
 const constantRouterMap = [
   {
     path: '/',
-    name: 'Index',
     redirect: '/home',
     component: () => import('../views/index.vue'),
-    children:[
+    children: [
       {
-        path: '/home',
-        name: 'Home',
-        component: () => import('../views/Home.vue'),
+        path: 'home',
+        name: 'home',
+        component: () => import('../views/home/index.vue'),
+        meta: {
+          title: '首页',
+          icon: 'el-icon-house'
+        }
       }
     ]
   },
@@ -26,18 +29,22 @@ const constantRouterMap = [
 const ansyncRoutesMap = [ // eslint-disable-line no-unused-vars
   {
     path: '/home',
-    name: 'Home',
-    component: () => import('../views/Home.vue'),
-    meta: {
-      title: '首页',
-      icon: 'el-icon-house'
-    }
+    component: () => import('../views/index.vue'),
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        component: () => import('../views/home/index.vue'),
+        meta: {
+          title: '首页',
+          icon: 'el-icon-house'
+        }
+      }
+    ]
   },
   {
     path: '/user',
-    name: 'user',
     component: () => import('../views/index.vue'),
-    redirect: '/user/userAdmin',
     meta: {
       title: '用户管理',
       icon: 'el-icon-user'
@@ -50,18 +57,46 @@ const ansyncRoutesMap = [ // eslint-disable-line no-unused-vars
         meta: {
           role: ['admin'],
           title: '中民用户管理',
-        }
+        },
+        children: [
+          {
+            path: 'A',
+            name: 'A',
+            component: () => import('../views/A.vue'),
+            meta: {
+              role: ['admin'],
+              title: 'A',
+            },
+          },
+
+          {
+            path: 'B',
+            name: 'B',
+            component: () => import('../views/B.vue'),
+            meta: {
+              role: ['admin'],
+              title: 'B',
+            }
+          }
+        ]
       }
     ]
   },
   {
     path: '/orderList',
-    name: 'orderList',
-    component: () => import('../views/orderList.vue'),
-    meta: {
-      role: ['admin', 'guest'],
-      title: '订单管理',
-    }
+    component: () => import('../views/index.vue'),
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        component: () => import('../views/orderList/index.vue'),
+        meta: {
+          icon: 'el-icon-s-order',
+          role: ['admin', 'guest'],
+          title: '订单管理',
+        }
+      }
+    ],
   }
 ]
 
