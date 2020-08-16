@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button, Container, Header, Main, Aside, Menu, MenuItem, MenuItemGroup, Submenu, Col, Row, Select, Option, Input, Table, TableColumn, Pagination, Card, DatePicker } from 'element-ui'
+import { Button, Container, Header, Main, Aside, Menu, MenuItem, MenuItemGroup, Submenu, Col, Row, Select, Option, Input, Table, TableColumn, Pagination, Card, DatePicker, Tree } from 'element-ui'
 
 Vue.use(Button)
     .use(Container)
@@ -20,3 +20,4 @@ Vue.use(Button)
     .use(Pagination)
     .use(Card)
     .use(DatePicker)
+    .use(Tree)

@@ -35,7 +35,7 @@
 <script>
 export default {
   mounted() {
-   console.info(this.parentPath)
+  
   },
   data() {
     return {
@@ -60,7 +60,8 @@ export default {
       return false
     }else {
       this.onlyOneChild = children[0]
-      parent.path !== '/' ? this.onlyChildPath = `${parent.path}/${children[0].path}`: children[0].path
+      console.info(parent)
+      parent.path !== '/' ? this.onlyChildPath = `${parent.path}/${children[0].path}`: this.onlyChildPath =`/${children[0].path}`
       return true
     }
   }

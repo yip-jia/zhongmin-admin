@@ -29,6 +29,7 @@
 
 <script>
 import roles from '../mock/roles.js'
+/* import { setTimeout } from 'timers'; */
 
 export default {
   data () {
@@ -45,7 +46,9 @@ export default {
       } else {
         this.$store.dispatch('getInfo', roles[1])
       }
-      this.$router.push('/')
+   
+        this.$router.push('/')
+    
     }
   }
 }

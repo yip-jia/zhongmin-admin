@@ -105,7 +105,7 @@
 
 <script>
 /* import qs from 'qs' */
-import {formatDate} from '../assets/js/util.js'
+import {formatDate} from '../../assets/js/util.js'
 export default {
   computed: {
     height () {

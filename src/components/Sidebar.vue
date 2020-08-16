@@ -1,6 +1,7 @@
 <template>
     <div>
        <el-menu
+       :default-active="activeMenu"
         router
         mode="vertical"
         active-text-color="#409EFF">
@@ -13,6 +14,14 @@
 <script>
 import SidebarItem from './SidebarItem'
 export default {
+    computed: {
+    activeMenu() {
+      const route = this.$route
+      const { path } = route
+     
+      return path
+    },
+    },
     components: {
         SidebarItem
     },
