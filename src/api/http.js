@@ -2,7 +2,7 @@ import axios from 'axios'
 import orderAPI from './order'
 import { Loading } from 'element-ui';
 let loadingInstance
-
+console.log(process.env.VUE_APP_BASE_URL);
 // obj 循环遍历输出不同的请求方法
 
 let instance = axios.create({
